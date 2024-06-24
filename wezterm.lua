@@ -11,7 +11,10 @@ config.keys = {
   { key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
   -- Make Option-Right equivalent to Alt-f; forward-word
   { key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
+  { key = 'f', mods="CTRL|CMD", action = wezterm.action.ToggleFullScreen,}
 }
+
+config.native_macos_fullscreen_mode = true
 
 config.font_size = 18.0
 
