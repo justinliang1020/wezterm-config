@@ -11,7 +11,7 @@ config.keys = {
   { key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
   -- Make Option-Right equivalent to Alt-f; forward-word
   { key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
-  { key = 'f', mods="CTRL|CMD", action = wezterm.action.ToggleFullScreen,}
+  { key = "f", mods = "CTRL|CMD", action = wezterm.action.ToggleFullScreen },
 }
 
 config.native_macos_fullscreen_mode = true
@@ -33,9 +33,9 @@ config.background = {
       File = (function()
         local appearance = get_appearance()
         if appearance:find("Dark") then
-          return wezterm.home_dir .. "/.config/wezterm/lain-dark.png"
+          return wezterm.home_dir .. "/.config/wezterm/makise_kurisu_dark.png"
         else
-          return wezterm.home_dir .. "/.config/wezterm/lain-light.png"
+          return wezterm.home_dir .. "/.config/wezterm/makise_kurisu_light.png"
         end
       end)(),
     },
